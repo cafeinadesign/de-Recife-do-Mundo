@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="end">
-      <!-- <ion-button (click)="index()">
+      <ion-button (click)="home()">
         <ion-icon name="book-outline"></ion-icon>
-      </ion-button> -->
-      <ion-button>
+      </ion-button>
+      <ion-button (click)="presentModal()">
         <ion-icon name="help-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
 
-    <ion-title>{{title}}</ion-title>
+    <ion-title>De Recife? Do mundo!!!</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,18 +18,14 @@
 <ion-footer>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="prev()">
-        <ion-icon slot="start" name="arrow-back"></ion-icon>
-        Anterior
+      <ion-button (click)="prev()" [disabled]="pagina === 0">
+        <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">
-      Página
-    </ion-title>
+    <ion-title class="ion-text-center">{{paginacao}}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="next()">
-        Próxima
-        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+        <ion-icon name="arrow-forward"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
