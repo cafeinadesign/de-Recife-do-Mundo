@@ -68,7 +68,7 @@ export class HomePage {
         this.paginacao = 'Artista';
         break;
       case 3:
-        this.paginacao = 'Prefácil';
+        this.paginacao = 'Prefácio';
         break;
 
       default:
